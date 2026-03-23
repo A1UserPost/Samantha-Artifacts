@@ -1,0 +1,50 @@
+<html>
+
+<h1>What's the problem?</h1>
+
+<script>
+function reportalert() {
+
+getDocumentById("report").submit();
+alert("Your report was submitted successfully");
+
+
+}
+</script>
+
+
+  <form name="report" action="https://www.cs.umb.edu/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/submit_page/submit_page.html"   method="POST">
+
+<div>
+
+
+        <input type="radio" value="rule1">
+        <label>Rule 1: This content constains discriminatory language, topic and/or imagery</label><br>
+
+        <input type="radio" value="rule2">
+        <label>Rule 2: This content is too serious</label><br>
+
+        <input type="radio" value="rule3">
+        <label>Rule 3: This language is offensive</label><br>
+
+        <input type="radio" value="rule4">
+        <label>Rule 4: This user will not leave me alone/making threats towards me.</label><br>
+
+        <input type="radio" value="rule5">
+        <label>Rule 5: This content is explicit.</label><br>
+
+
+        <label>Other:</label>
+        <input type="text" id="other" name="other"><br><br>
+
+
+
+        <input type="submit" value="Submit" onclick="reportalert()">
+
+
+
+</div>
+ </form>
+</html>
+  
+        <label>Rule 4: This user will not leave me alone/making threats towards me.</label><br>
