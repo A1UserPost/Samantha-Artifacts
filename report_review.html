@@ -8,10 +8,11 @@
 
 
 <script>
+const reportdata = JSON.parse(localStorage.getItem("reports"));
 
-let report = localStorage.getItem("reports");
-
-document.getElementById("displayReports").outerHTML = report;
+console.log(reportdata.rule);
+console.log(reportdata.description);
+console.log(reportdata.time);
 
 </script>
 
