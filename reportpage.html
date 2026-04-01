@@ -2,49 +2,53 @@
 
 <h1>What's the problem?</h1>
 
-<script>
-function reportalert() {
 
-getDocumentById("report").submit();
-alert("Your report was submitted successfully");
-
-
-}
-</script>
-
-
-  <form name="report" action="https://www.cs.umb.edu/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/submit_page/submit_page.html"   method="POST">
+  <form name="report" id="report" action="https://www.cs.umb.edu/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/report_page/report_review.html" method="POST">
 
 <div>
 
+ <input type="radio" name="rules" value="rule1" id="rule1" required="required">
+        <label for="rule1">Rule 1: This content constains discriminatory language, topic and/or imagery</label><br>
 
-        <input type="radio" value="rule1">
-        <label>Rule 1: This content constains discriminatory language, topic and/or imagery</label><br>
+        <input type="radio" name="rules" value="rule2" id="rule2">
+        <label for="rule2">Rule 2: This content is too serious</label><br>
 
-        <input type="radio" value="rule2">
-        <label>Rule 2: This content is too serious</label><br>
+        <input type="radio" name="rules" value="rule3" id="rule3">
+        <label for="rule3">Rule 3: This language is offensive</label><br>
 
-        <input type="radio" value="rule3">
-        <label>Rule 3: This language is offensive</label><br>
+        <input type="radio" name="rules" value="rule4" id="rule4">
+        <label for="rule4">Rule 4: This user will not leave me alone/making threats towards me.</label><br>
 
-        <input type="radio" value="rule4">
-        <label>Rule 4: This user will not leave me alone/making threats towards me.</label><br>
+        <input type="radio" name="rules" value="rule5" id="rule5">
+        <label for="rule5">Rule 5: This content is explicit.</label><br>
 
-        <input type="radio" value="rule5">
-        <label>Rule 5: This content is explicit.</label><br>
+        <label for="other">Describe the problem:</label>
+        <input type="text" id="other" name="other" required="required"><br><br>
+  
 
-
-        <label>Other:</label>
-        <input type="text" id="Describe the problem:" name="other"><br><br>
-
-
-
-        <input type="submit" value="Submit" onclick="reportalert()">
+        <input type="submit" value="Submit" onclick="submit()">
 
 
 
 </div>
  </form>
+
+<script>
+
+
+
+ function submit() {
+
+        const reportforms = document.forms;
+        localStorage.setItem("reports", JSON.stringify(reportforms));
+
+ }
+
+
+ </script>
+
+
+  
 </html>
   
         <label>Rule 4: This user will not leave me alone/making threats towards me.</label><br>
