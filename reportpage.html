@@ -1,13 +1,19 @@
+<!DOCTYPE html>
+
 <html>
 
 <h1>What's the problem?</h1>
 
+<div class="reportform">
 
-  <form name="report" id="report" action="https://www.cs.umb.edu/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/report_page/report_review.html" method="POST">
 
-<div>
+<script src="/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/report_page/report_page.js"></script>
+  <form name="report" id="report" action="/~hdeblois/cs410/longproj01/t1-UP/Artifacts/samanthaArtifacts/report_page/report_review.html" method="POST" onsubmit="return newsubmit();">
 
- <input type="radio" name="rules" value="rule1" id="rule1" required="required">
+
+<div id="rule" >
+
+        <input type="radio" name="rules" value="rule1" id="rule1" required>
         <label for="rule1">Rule 1: This content constains discriminatory language, topic and/or imagery</label><br>
 
         <input type="radio" name="rules" value="rule2" id="rule2">
@@ -21,22 +27,20 @@
 
         <input type="radio" name="rules" value="rule5" id="rule5">
         <label for="rule5">Rule 5: This content is explicit.</label><br>
+</div>
+
+<div id="descript">
 
         <label for="other">Describe the problem:</label>
-        <input type="text" id="other" name="other" required="required"><br><br>
-  
-
-        <input type="submit" value="Submit" onclick="submit()">
-
-
+        <input type="text" id="other" name="other" required><br><br>
 
 </div>
- </form>
 
-<script src="report_page.js"></script>
+        <input type="submit" value="submit">
 
 
-  
-</html>
-  
-        <label>Rule 4: This user will not leave me alone/making threats towards me.</label><br>
+</form>
+
+</div>
+
+</html>his user will not leave me alone/making threats towards me.</label><br>
