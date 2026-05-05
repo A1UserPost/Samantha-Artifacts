@@ -2,17 +2,26 @@
 
 <html>
 
+<title> Thank you for your submission!</title>
+
+<h1> Thank you for your submission! </h1>
+
 <body>
 
-<p id="displayReports"></p>
+Your response has been recorded and is set for review. We hope you'll have a more
+pleasent experience with Whole Lotta Nothing.
+
+We'll update you on your report as soon as possible.
 
 
 <script>
-const reportdata = JSON.parse(localStorage.getItem("reports"));
+const reportData = JSON.parse(localStorage.getItem("reports"));
 
-console.log(reportdata.rule);
-console.log(reportdata.description);
-console.log(reportdata.time);
+console.log(reportData);
+
+const allReports = JSON.parse(localStorage.getItem("All")) || [];
+allReports.push(reportData);
+localStorage.setItem("All", JSON.stringify(allReports));
 
 </script>
 
