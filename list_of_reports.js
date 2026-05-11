@@ -36,7 +36,7 @@ for (let i = 0; i < allreports.length; i++) {
 function showReports(value) {
 
 console.log(value);
-document.getElementById("SetofReports").innerHTML = JSON.stringify(value);
+document.getElementById("SetofReports").textContent = JSON.stringify(value);
 }
 
 function clearReports()  {
